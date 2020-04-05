@@ -1,0 +1,49 @@
+@import 'sections/header.scss';
+
+$blue5: blue;
+h2{
+    color: $blue5;
+}
+.contacts {
+    background-color: red;
+    padding: 40px;
+    margin: 30px;
+    &__title {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    &__column {
+        width: 50%;
+        &_right {
+            color: green;
+        }
+    }
+}
+
+.info {
+    @extend .contacts;
+    background-color: green;
+}
+
+@mixin item($size) {
+    padding: $size;
+    margin: $size;
+    background-color: red;
+    width: 50px;
+}
+
+.info__item {
+    @include item(20px);
+}
+
+
+.contacts__item {
+    @include item(30px);
+}
+$base-size: 20px;
+h2 {
+    width: (80vw - 300px);
+    height: $base-size*2;
+
+}

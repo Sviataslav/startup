@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        link(href="styles/main.css", rel="stylesheet")
+    body
+        include sections/header.pug
+        mixin title(word)
+            li.title= word
+        ul
+            +title("hi man")
+            +title("good")
+        .contacts
+            .contacts__title Title
+            .contacts__column.contacts__column_right Column
+        .info
+        ul
+            li some
+            li 2some
+        include sections/footer.pug
+        img(src="./img/cat.jpg", alt="")
+        
